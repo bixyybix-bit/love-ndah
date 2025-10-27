@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Animation - ndah</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffe6f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .love-container {
+      text-align: center;
+    }
+
+    .heart {
+      position: relative;
+      width: 100px;
+      height: 90px;
+      margin: 0 auto 20px;
+      animation: heartbeat 1.2s infinite;
+    }
+
+    .heart:before,
+    .heart:after {
+      position: absolute;
+      content: "";
+      left: 50px;
+      top: 0;
+      width: 50px;
+      height: 80px;
+      background: #e74c3c; /* Warna merah */
+      border-radius: 50px 50px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+
+    .heart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+
+    .name {
+      font-size: 28px;
+      color: #c0392b;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      15% { transform: scale(1.15); }
+      30% { transform: scale(1); }
+      45% { transform: scale(1.15); }
+      60% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="love-container">
+    <div class="heart"></div>
+    <div class="name">ndah</div>
+  </div>
+</body>
+</html>
